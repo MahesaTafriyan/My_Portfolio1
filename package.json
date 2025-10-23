@@ -1,0 +1,13 @@
+{
+  "name": "mahesa-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio dengan CMS",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'No build process'"
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  }
+}   

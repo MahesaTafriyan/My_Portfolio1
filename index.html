@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0 user-scalable=yes" />
+  <title>Mahesa Tafriyan | Ethical Hacker & Web Developer</title>
+  <meta name="description" content="Portfolio of Mahesa Tafriyan - Ethical Hacking Specialist and Web Developer from Probolinggo">
+  <meta name="keywords" content="ethical hacking, cybersecurity, web development, portfolio, Mahesa Tafriyan">
+  <meta name="theme-color" content="#0a0f2c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="image/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e6fdb',
+            'primary-light': '#4ea0ff',
+            'primary-dark': '#0a2a74',
+            secondary: '#ff6e6e',
+            dark: '#0a0f2c',
+            darker: '#070a1f',
+            light: '#e0e7ff',
+            lighter: '#f0f4ff',
+            accent: '#00ffaa',
+            success: '#4caf50',
+            warning: '#ff9800',
+            danger: '#f44336',
+          },
+          fontFamily: {
+            main: ['Poppins', 'sans-serif'],
+            heading: ['Orbitron', 'sans-serif'],
+            serif: ['IBM Plex Serif', 'serif'],
+          },
+          boxShadow: {
+            'sm': '0 2px 8px rgba(0,0,0,0.1)',
+            'md': '0 4px 16px rgba(0,0,0,0.2)',
+            'lg': '0 8px 32px rgba(0,0,0,0.3)',
+            'primary': '0 0 15px #4ea0ff',
+            'accent': '0 0 15px #00ffaa',
+          },
+          borderRadius: {
+            'xl': '12px',
+          },
+          maxWidth: {
+            'screen-xl': '1200px',
+          },
+          backgroundImage: {
+            'grid-pattern': 'linear-gradient(0deg, rgba(0, 123, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 123, 255, 0.1) 1px, transparent 1px)',
+          },
+          backgroundSize: {
+            '40': '40px 40px',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            blink: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0' },
+            },
+            bounce: {
+              '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+              '40%': { transform: 'translateY(-10px)' },
+              '60%': { transform: 'translateY(-5px)' },
+            },
+            pulse: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.05)' },
+            },
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            blink: 'blink 0.7s infinite',
+            bounce: 'bounce 2s infinite',
+            pulse: 'pulse 1.5s infinite',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark bg-grid-pattern bg-[length:40px_40px] bg-fixed text-light font-main">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-[1000] bg-[rgba(10,15,44,0.9)] backdrop-blur-[10px] shadow-[0_2px_20px_rgba(0,0,0,0.3)] transition-all duration-300 scrolled:bg-[rgba(10,15,44,0.98)] scrolled:shadow-[0_5px_30px_rgba(0,0,0,0.5)]">
+    <div class="container max-w-screen-xl mx-auto px-6">
+      <nav class="flex justify-between items-center py-4 h-[70px]">
+        <div class="nav-brand font-heading text-[1.8rem] font-bold text-primary-light tracking-[1px] flex items-center gap-2">
+          <i class="fas fa-code text-accent"></i>
+          <span>Mahesa</span>
+        </div>
+        
+        <div class="nav-menu hidden md:flex gap-8" id="nav-menu">
+          <a href="#home" class="active font-semibold text-[1.1rem] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full active:text-accent">Home</a>
+          <a href="#about" class="font-semibold text-[1.1rem] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">About</a>
+          <a href="#skills" class="font-semibold text-[1.1rem] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Skills</a>
+          <a href="#projects" class="font-semibold text-[1.1rem] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Projects</a>
+          <a href="#sertifikat" class="font-semibold text-[1.1rem] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Certificates</a>
+          <a href="#articles" class="font-semibold text-[1.1rem] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Articles</a>
+          <a href="#testimonials" class="font-semibold text-[1.1rem] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Testimonials</a>
+          <a href="#contact" class="font-semibold text-[1.1rem] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+        </div>
+        
+        <button class="hamburger md:hidden flex flex-col justify-between w-[30px] h-[20px] bg-transparent border-none cursor-pointer z-[1001]" id="hamburger">
+          <span class="block w-full h-[3px] bg-primary-light rounded-[2px] transition-all duration-300"></span>
+          <span class="block w-full h-[3px] bg-primary-light rounded-[2px] transition-all duration-300"></span>
+          <span class="block w-full h-[3px] bg-primary-light rounded-[2px] transition-all duration-300"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="interactive-bg">
+    <div class="cursor-trail-container"></div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="particle-field"></div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center relative overflow-hidden pt-[70px] animate__animated animate__fadeIn">
+      <div class="hero-content max-w-[800px] mx-auto relative z-[1]">
+        <h1 class="hero-title mb-6 text-[clamp(2.5rem,5vw,4rem)] font-heading font-bold text-primary-light tracking-[1px] text-shadow-[0_0_10px_#4ea0ff]">Mahesa Tafriyan</h1>
+        <h2 class="hero-subtitle text-[1.5rem] mb-8 text-accent font-serif italic">Ethical Hacker & Web Developer</h2>
+        
+        <div class="typing-container">
+          <span class="typing-text text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary-light inline-block min-h-[2.5rem]"></span>
+          <span class="cursor inline-block w-[3px] h-[2.5rem] bg-accent align-bottom animate-blink">|</span>
+        </div>
+        
+        <p class="text-[1.1rem] mb-6 opacity-90">I am a student passionate about cybersecurity and ethical hacking, dedicated to mastering the art of securing digital systems and networks.</p>
+        
+        <div class="social-icons flex justify-center gap-6 my-8">
+          <a href="https://github.com/MahesaTafriyan" target="_blank" aria-label="GitHub" class="w-[50px] h-[50px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.5rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px] hover:shadow-primary"><i class="fab fa-github"></i></a>
+          <a href="https://instagram.com/hesaxyz_" target="_blank" aria-label="Instagram" class="w-[50px] h-[50px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.5rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px] hover:shadow-primary"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/MahesaTafriyan" target="_blank" aria-label="Twitter" class="w-[50px] h-[50px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.5rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px] hover:shadow-primary"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.tiktok.com/@_g4mm4_" target="_blank" aria-label="TikTok" class="w-[50px] h-[50px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.5rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px] hover:shadow-primary"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.quora.com/profile/Mahesa-Tafriyan" target="_blank" aria-label="Quora" class="w-[50px] h-[50px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.5rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px] hover:shadow-primary"><i class="fab fa-quora"></i></a>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#about" class="btn btn-accent">Explore My Journey</a>
+          <a href="#articles" class="btn btn-outline">Read Articles</a>
+        </div>
+      </div>
+      
+      <a href="#about" class="scroll-down absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-light opacity-70 transition-all duration-300 hover:opacity-100 hover:text-accent" aria-label="Scroll down">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down animate-bounce mt-1"></i>
+      </a>
+    </section>
+
+    <audio id="bgMusic" loop>
+      <source src="https://audio.jukehost.co.uk/3zSuO7gzj112WxVVESvTjquXNfY7nGaT" type="audio/mpeg">
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <!-- Music Control Button -->
+    <div id="musicControl" class="music-control fixed bottom-5 left-5 bg-[rgba(30,111,219,0.7)] text-white px-4 py-2 rounded-full cursor-pointer flex items-center gap-2 z-[1000] backdrop-blur-[5px] border border-[rgba(78,160,255,0.3)] transition-all duration-300 hover:bg-primary hover:shadow-primary playing:bg-accent playing:text-dark">
+      <i class="fas fa-music text-[1.2rem] playing:animate-pulse"></i>
+      <span>Music</span>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-[rgba(19,42,77,0.8)] to-[rgba(10,15,44,0.9)]">
+      <div class="container max-w-screen-xl mx-auto px-6">
+        <div class="section-title text-center mb-12">
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-heading font-bold inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-primary after:to-transparent after:rounded">About <span class="text-gradient">Me</span></h2>
+        </div>
+        
+        <div class="about-content grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="about-image float max-w-[500px] mx-auto relative rounded-xl overflow-hidden shadow-lg hover:img:scale-[1.03] before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-br before:from-[rgba(30,111,219,0.3)] before:to-[rgba(0,255,170,0.2)] before:z-[1] before:rounded-xl">
+            <img src="image/profile.JPG" alt="Mahesa Tafriyan" loading="lazy" class="w-full h-auto block rounded-xl transition-all duration-300">
+          </div>
+          
+          <div class="about-text pb-16">
+            <h3 class="text-[clamp(1.5rem,3vw,2rem)] font-heading font-bold text-accent mb-8 text-left md:text-left">Cybersecurity Enthusiast from Probolinggo</h3>
+            
+            <p class="about-description">
+              I am a student at SMK Negeri 1 Probolinggo majoring in Software Engineering (RPL). My journey in technology began with a curiosity about how systems work, which evolved into a passion for cybersecurity and ethical hacking.
+            </p>
+            
+            <p class="about-description">
+              Currently, I'm focused on mastering penetration testing techniques, network security fundamentals, and secure coding practices. I believe in continuous learning and regularly participate in cybersecurity competitions and capture-the-flag (CTF) challenges to hone my skills.
+            </p>
+            
+            <div class="skills-list grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+              <div class="skill-item flex items-center gap-2">
+                <i class="fas fa-check-circle text-accent"></i>
+                <span>Ethical Hacking</span>
+              </div>
+              <div class="skill-item flex items-center gap-2">
+                <i class="fas fa-check-circle text-accent"></i>
+                <span>Web Development</span>
+              </div>
+              <div class="skill-item flex items-center gap-2">
+                <i class="fas fa-check-circle text-accent"></i>
+                <span>Penetration Testing</span>
+              </div>
+              <div class="skill-item flex items-center gap-2">
+                <i class="fas fa-check-circle text-accent"></i>
+                <span>Technical Writing</span>
+              </div>
+            </div>
+            
+            <div class="text-left md:text-left mt-8">
+              <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-[rgba(26,46,108,0.8)] to-[rgba(10,15,44,0.9)]">
+      <div class="container max-w-screen-xl mx-auto px-6">
+        <div class="section-title text-center mb-12">
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-heading font-bold inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-primary after:to-transparent after:rounded">My <span class="text-gradient">Skills</span></h2>
+        </div>
+        
+        <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Technical Skills -->
+          <div class="skill-category card bg-[rgba(30,111,219,0.1)] backdrop-blur-[10px] rounded-xl p-8 shadow-md transition-all duration-300 border border-[rgba(78,160,255,0.1)] hover:bg-[rgba(30,111,219,0.2)] hover:border-[rgba(78,160,255,0.3)] hover:-translate-y-[5px] hover:shadow-lg">
+            <h3 class="mb-6 flex items-center gap-2"><i class="fas fa-laptop-code text-accent"></i> Technical Skills</h3>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Ethical Hacking</span>
+                <span class="skill-percent text-accent">50%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="50"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Web Development</span>
+                <span class="skill-percent text-accent">40%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="40"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Python Programming</span>
+                <span class="skill-percent text-accent">60%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="60"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Network Security</span>
+                <span class="skill-percent text-accent">30%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="30"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Cybersecurity Skills -->
+          <div class="skill-category card bg-[rgba(30,111,219,0.1)] backdrop-blur-[10px] rounded-xl p-8 shadow-md transition-all duration-300 border border-[rgba(78,160,255,0.1)] hover:bg-[rgba(30,111,219,0.2)] hover:border-[rgba(78,160,255,0.3)] hover:-translate-y-[5px] hover:shadow-lg">
+            <h3 class="mb-6 flex items-center gap-2"><i class="fas fa-shield-alt text-accent"></i> Cybersecurity</h3>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Penetration Testing</span>
+                <span class="skill-percent text-accent">40%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="40"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Vulnerability Assessment</span>
+                <span class="skill-percent text-accent">25%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="25"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">OSINT</span>
+                <span class="skill-percent text-accent">30%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="30"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Digital Forensics</span>
+                <span class="skill-percent text-accent">10%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="10"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Creative Skills -->
+          <div class="skill-category card bg-[rgba(30,111,219,0.1)] backdrop-blur-[10px] rounded-xl p-8 shadow-md transition-all duration-300 border border-[rgba(78,160,255,0.1)] hover:bg-[rgba(30,111,219,0.2)] hover:border-[rgba(78,160,255,0.3)] hover:-translate-y-[5px] hover:shadow-lg">
+            <h3 class="mb-6 flex items-center gap-2"><i class="fas fa-paint-brush text-accent"></i> Creative Skills</h3>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Technical Writing</span>
+                <span class="skill-percent text-accent">80%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="80"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Presentation Design</span>
+                <span class="skill-percent text-accent">85%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="85"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Creative Writing</span>
+                <span class="skill-percent text-accent">80%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="80"></div>
+              </div>
+            </div>
+            
+            <div class="skill mb-6">
+              <div class="skill-info flex justify-between mb-2">
+                <span class="skill-name font-semibold">Public Speaking</span>
+                <span class="skill-percent text-accent">75%</span>
+              </div>
+              <div class="skill-bar h-2 bg-[rgba(78,160,255,0.1)] rounded overflow-hidden">
+                <div class="skill-progress h-full bg-gradient-to-r from-primary to-accent rounded w-0" data-width="75"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-br from-[rgba(19,42,77,0.8)] to-[rgba(10,15,44,0.9)]">
+      <div class="container max-w-screen-xl mx-auto px-6">
+        <div class="section-title text-center mb-12">
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-heading font-bold inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-primary after:to-transparent after:rounded">My <span class="text-gradient">Projects</span></h2>
+        </div>
+        
+        <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="project-item card bg-[rgba(19,42,77,0.7)] backdrop-blur-[10px] rounded-xl shadow-md transition-all duration-300 border border-[rgba(78,160,255,0.1)] hover:-translate-y-[10px] hover:shadow-lg hover:border-[rgba(78,160,255,0.3)] overflow-hidden">
+            <div class="project-image h-[200px] overflow-hidden">
+              <img src="image/project1.png" alt="Ethical Hacking Toolkit" loading="lazy" class="w-full h-full object-cover transition-all duration-300">
+            </div>
+            <div class="project-content p-6">
+              <h3 class="text-[1.5rem] font-heading font-bold text-primary-light mb-4">WEB Portfolio</h3>
+              <p class="text-[0.95rem] mb-5">Project WEB Portfolio saya tentang data diri saya termasuk project dan sertifikat </p>
+              <div class="project-tags flex flex-wrap gap-2 mb-6">
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">Python</span>
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">Bash</span>
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">Security</span>
+              </div>
+              <div class="project-links flex gap-3">
+                <a href="https://mahesatafriyan.netlify.app/" target="_blank" class="btn btn-sm">View Code</a>
+                <a href="#" target="_blank" class="btn btn-sm btn-outline">Demo</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="project-item card bg-[rgba(19,42,77,0.7)] backdrop-blur-[10px] rounded-xl shadow-md transition-all duration-300 border border-[rgba(78,160,255,0.1)] hover:-translate-y-[10px] hover:shadow-lg hover:border-[rgba(78,160,255,0.3)] overflow-hidden">
+            <div class="project-image h-[200px] overflow-hidden">
+              <img src="image/project2.png" alt="Secure Web Application" loading="lazy" class="w-full h-full object-cover transition-all duration-300">
+            </div>
+            <div class="project-content p-6">
+              <h3 class="text-[1.5rem] font-heading font-bold text-primary-light mb-4">eSeragam-SMKN-1-Probolinggo</h3>
+              <p class="text-[0.95rem] mb-5"></p>
+              <div class="project-tags flex flex-wrap gap-2 mb-6">
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">HTML/CSS</span>
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">JavaScript</span>
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">Python</span>
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">JSON</span>
+              </div>
+              <div class="project-links flex gap-3">
+                <a href="https://github.com/MahesaTafriyan/eSeragam-SMKN-1-Probolinggo.git" target="_blank" class="btn btn-sm">View Code</a>
+                <a href="#" target="_blank" class="btn btn-sm btn-outline">Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-item card bg-[rgba(19,42,77,0.7)] backdrop-blur-[10px] rounded-xl shadow-md transition-all duration-300 border border-[rgba(78,160,255,0.1)] hover:-translate-y-[10px] hover:shadow-lg hover:border-[rgba(78,160,255,0.3)] overflow-hidden">
+            <div class="project-image h-[200px] overflow-hidden">
+              <img src="image/project3.png" alt="Secure Web Application" loading="lazy" class="w-full h-full object-cover transition-all duration-300">
+            </div>
+            <div class="project-content p-6">
+              <h3 class="text-[1.5rem] font-heading font-bold text-primary-light mb-4">Web Toko Kue Coklat</h3>
+              <div class="project-tags flex flex-wrap gap-2 mb-6">
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">HTML/CSS</span>
+                <span class="bg-[rgba(78,160,255,0.1)] text-primary-light px-3 py-1 rounded-full text-[0.8rem] font-medium">JavaScript</span>
+              </div>
+              <div class="project-links flex gap-3">
+                <a href="https://github.com/MahesaTafriyan/Toko_Kue_Coklat.git" target="_blank" class="btn btn-sm">View Code</a>
+                <a href="https://coklatkita.netlify.app/" target="_blank" class="btn btn-sm btn-outline">Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="sertifikat" class="py-20 bg-gradient-to-br from-[rgba(19,42,77,0.8)] to-[rgba(10,15,44,0.9)]">
+      <div class="container max-w-screen-xl mx-auto px-6">
+        <div class="section-title text-center mb-12">
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-heading font-bold inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-primary after:to-transparent after:rounded">My <span class="text-gradient">Certificates</span></h2>
+        </div>
+
+        <div class="certificates-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Certificate 12 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat11.jpg" alt="Short Story Anthology Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Hardware Fundamental</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 12 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat12.jpg" alt="Short Story Anthology Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Hardware Fundamental</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+          <!-- Certificate 1 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat1.png" alt="UI/UX Design Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">UI/UX Design</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat2.png" alt="Web Programming Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Web Programming</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 3 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat3.png" alt="Mobile Application Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Mobile Application</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 4 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat4.png" alt="Python Programming Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Python Programming</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 5 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat5.png" alt="Broadcasting Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Broadcasting</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 6 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat6.png" alt="Cysec Competition Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Cysec Competition</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 7 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat7.png" alt="Published Book Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Published Book</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 8 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat8.png" alt="Best Writer Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Best Writer</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 9 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat9.jpg" alt="PPATK Teaching Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">PPATK Teaching</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 10 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat10.jpg" alt="PYJAIL Participant Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">PYJAIL Participant</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 11 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/terbitbuku.jpg" alt="Short Story Anthology Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">Short Story Anthology</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+
+          <!-- Certificate 10 -->
+          <div class="certificate-item card relative rounded-xl overflow-hidden shadow-md transition-all duration-300 aspect-[1.5] hover:-translate-y-[10px] hover:shadow-lg">
+            <img src="image/sertifikat13.jpg" alt="PYJAIL Participant Certificate" loading="lazy" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.05]">
+            <div class="certificate-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.8)] p-6 text-white translate-y-full transition-all duration-300 hover:translate-y-0">
+              <h3 class="certificate-title font-semibold mb-2 text-accent">LDKS SMPN 9</h3>
+              <p class="certificate-date text-[0.9rem] opacity-80">Issued: 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="py-20 bg-gradient-to-br from-[rgba(26,46,108,0.8)] to-[rgba(10,15,44,0.9)]">
+      <div class="container max-w-screen-xl mx-auto px-6">
+        <div class="section-title text-center mb-12">
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-heading font-bold inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-primary after:to-transparent after:rounded">
+            Latest <span class="text-gradient">Articles</span>
+          </h2>
+          <p class="text-lg opacity-80 mt-4">Sharing knowledge about cybersecurity and web development</p>
+        </div>
+        
+        <!-- Admin Access Button -->
+        <div class="text-center mb-12">
+          <a href="/admin/" class="btn btn-accent inline-flex items-center gap-2">
+            <i class="fas fa-edit"></i>
+            Manage Articles
+          </a>
+        </div>
+        
+        <div id="articles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Articles will be loaded here dynamically -->
+          <div class="text-center py-12 col-span-full">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mx-auto mb-4"></div>
+            <p class="text-light opacity-70">Loading articles...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox for Certificates -->
+    <div class="lightbox fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.9)] flex justify-center items-center z-[10000] opacity-0 invisible transition-all duration-300 active:opacity-100 active:visible">
+      <div class="lightbox-content relative max-w-[90%] max-h-[90%]">
+        <button class="lightbox-close absolute top-[-40px] right-0 text-white text-[2rem] cursor-pointer transition-all duration-300 hover:text-accent">&times;</button>
+        <img src="" alt="Certificate Preview" class="max-w-full max-h-[80vh] rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+        <div class="lightbox-nav absolute top-1/2 w-full flex justify-between px-4 -translate-y-1/2">
+          <button class="lightbox-prev bg-[rgba(0,0,0,0.5)] text-white border-none w-[50px] h-[50px] rounded-full text-[1.5rem] cursor-pointer transition-all duration-300 hover:bg-primary"><i class="fas fa-chevron-left"></i></button>
+          <button class="lightbox-next bg-[rgba(0,0,0,0.5)] text-white border-none w-[50px] h-[50px] rounded-full text-[1.5rem] cursor-pointer transition-all duration-300 hover:bg-primary"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-[rgba(26,46,108,0.8)] to-[rgba(10,15,44,0.9)]">
+      <div class="container max-w-screen-xl mx-auto px-6">
+        <div class="section-title text-center mb-12">
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-heading font-bold inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-primary after:to-transparent after:rounded">Words of <span class="text-gradient">Wisdom</span></h2>
+        </div>
+        
+        <div class="testimonials-container max-w-[800px] mx-auto">
+          <div class="testimonial-slider relative overflow-hidden">
+            <div class="testimonial-track flex transition-transform duration-500 ease">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-item card min-w-full p-8 bg-[rgba(30,111,219,0.1)] rounded-xl border border-[rgba(78,160,255,0.1)] shadow-md">
+                <div class="testimonial-text italic mb-6 relative before:content-['"'] before:text-[3rem] before:text-accent before:opacity-30 before:absolute before:top-[-1rem] before:left-[-1rem] after:content-['"'] after:text-[3rem] after:text-accent after:opacity-30 after:absolute after:bottom-[-2rem] after:right-[-1rem]">
+                  <p>Jadilah seperti air putih meskipun tak mewah namun sangat berarti bagi kehidupan.</p>
+                </div>
+                <div class="testimonial-author flex items-center gap-4">
+                  <img src="image/profile.jpg" alt="Mahesa Tafriyan" loading="lazy" class="w-[50px] h-[50px] rounded-full object-cover border-2 border-accent">
+                  <div class="author-info">
+                    <h4 class="text-accent mb-1">Mahesa Tafriyan</h4>
+                    <p class="text-[0.9rem] opacity-70 mb-0">Student & Ethical Hacker</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 2 -->
+              <div class="testimonial-item card min-w-full p-8 bg-[rgba(30,111,219,0.1)] rounded-xl border border-[rgba(78,160,255,0.1)] shadow-md">
+                <div class="testimonial-text italic mb-6 relative before:content-['"'] before:text-[3rem] before:text-accent before:opacity-30 before:absolute before:top-[-1rem] before:left-[-1rem] after:content-['"'] after:text-[3rem] after:text-accent after:opacity-30 after:absolute after:bottom-[-2rem] after:right-[-1rem]">
+                  <p>Manusia bisa bahagia dengan prinsip hidup yaitu bersyukur.</p>
+                </div>
+                <div class="testimonial-author flex items-center gap-4">
+                  <img src="image/profile.jpg" alt="Mahesa Tafriyan" loading="lazy" class="w-[50px] h-[50px] rounded-full object-cover border-2 border-accent">
+                  <div class="author-info">
+                    <h4 class="text-accent mb-1">Mahesa Tafriyan</h4>
+                    <p class="text-[0.9rem] opacity-70 mb-0">Student & Ethical Hacker</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 3 -->
+              <div class="testimonial-item card min-w-full p-8 bg-[rgba(30,111,219,0.1)] rounded-xl border border-[rgba(78,160,255,0.1)] shadow-md">
+                <div class="testimonial-text italic mb-6 relative before:content-['"'] before:text-[3rem] before:text-accent before:opacity-30 before:absolute before:top-[-1rem] before:left-[-1rem] after:content-['"'] after:text-[3rem] after:text-accent after:opacity-30 after:absolute after:bottom-[-2rem] after:right-[-1rem]">
+                  <p>Being an ethical hacker is like being a digital superhero—silent, skilled, and always alert.</p>
+                </div>
+                <div class="testimonial-author flex items-center gap-4">
+                  <img src="image/profile.jpg" alt="Mahesa Tafriyan" loading="lazy" class="w-[50px] h-[50px] rounded-full object-cover border-2 border-accent">
+                  <div class="author-info">
+                    <h4 class="text-accent mb-1">Mahesa Tafriyan</h4>
+                    <p class="text-[0.9rem] opacity-70 mb-0">Student & Ethical Hacker</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 4 -->
+              <div class="testimonial-item card min-w-full p-8 bg-[rgba(30,111,219,0.1)] rounded-xl border border-[rgba(78,160,255,0.1)] shadow-md">
+                <div class="testimonial-text italic mb-6 relative before:content-['"'] before:text-[3rem] before:text-accent before:opacity-30 before:absolute before:top-[-1rem] before:left-[-1rem] after:content-['"'] after:text-[3rem] after:text-accent after:opacity-30 after:absolute after:bottom-[-2rem] after:right-[-1rem]">
+                  <p>Hacking just means building something quickly or testing the boundaries of what can be done.</p>
+                </div>
+                <div class="testimonial-author flex items-center gap-4">
+                  <img src="image/profile.jpg" alt="Mark Zuckerberg" loading="lazy" class="w-[50px] h-[50px] rounded-full object-cover border-2 border-accent">
+                  <div class="author-info">
+                    <h4 class="text-accent mb-1">Mark Zuckerberg</h4>
+                    <p class="text-[0.9rem] opacity-70 mb-0">Founder of Facebook</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-nav flex justify-center gap-4 mt-8">
+            <div class="testimonial-dot w-3 h-3 rounded-full bg-[rgba(78,160,255,0.3)] cursor-pointer transition-all duration-300 active:bg-accent active:scale-[1.2]"></div>
+            <div class="testimonial-dot w-3 h-3 rounded-full bg-[rgba(78,160,255,0.3)] cursor-pointer transition-all duration-300"></div>
+            <div class="testimonial-dot w-3 h-3 rounded-full bg-[rgba(78,160,255,0.3)] cursor-pointer transition-all duration-300"></div>
+            <div class="testimonial-dot w-3 h-3 rounded-full bg-[rgba(78,160,255,0.3)] cursor-pointer transition-all duration-300"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-[rgba(19,42,77,0.8)] to-[rgba(10,15,44,0.9)] mt-12">
+      <div class="container max-w-screen-xl mx-auto px-6">
+        <div class="section-title text-center mb-12">
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-heading font-bold inline-block relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-primary after:to-transparent after:rounded">Get In <span class="text-gradient">Touch</span></h2>
+        </div>
+        
+        <div class="contact-container grid grid-cols-1 lg:grid-cols-2 gap-12 px-8">
+          <div class="contact-info flex flex-col gap-6 pt-4">
+            <div class="contact-item flex items-start gap-4 mb-4">
+              <div class="contact-icon w-[50px] h-[50px] bg-[rgba(78,160,255,0.1)] rounded-full flex items-center justify-center text-[1.2rem] text-accent mb-2">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3 class="text-[1.2rem] mb-2">Email</h3>
+                <a href="mailto:mahesatafrian@gmail.com" class="opacity-80 hover:opacity-100 hover:text-accent">mahesatafrian@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item flex items-start gap-4 mb-4">
+              <div class="contact-icon w-[50px] h-[50px] bg-[rgba(78,160,255,0.1)] rounded-full flex items-center justify-center text-[1.2rem] text-accent mb-2">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3 class="text-[1.2rem] mb-2">Location</h3>
+                <p class="opacity-80">Probolinggo, East Java, Indonesia</p>
+              </div>
+            </div>
+            
+            <div class="contact-item flex items-start gap-4 mb-4">
+              <div class="contact-icon w-[50px] h-[50px] bg-[rgba(78,160,255,0.1)] rounded-full flex items-center justify-center text-[1.2rem] text-accent mb-2">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="contact-details">
+                <h3 class="text-[1.2rem] mb-2">Education</h3>
+                <p class="opacity-80">SMK Negeri 1 Probolinggo</p>
+                <p class="opacity-80">Software Engineering (RPL)</p>
+              </div>
+            </div>
+            
+            <div class="social-icons flex gap-6">
+              <a href="https://github.com/MahesaTafriyan" target="_blank" aria-label="GitHub" class="w-[40px] h-[40px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.2rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px]"><i class="fab fa-github"></i></a>
+              <a href="https://instagram.com/hesaxyz_" target="_blank" aria-label="Instagram" class="w-[40px] h-[40px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.2rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px]"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/MahesaTafriyan" target="_blank" aria-label="Twitter" class="w-[40px] h-[40px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.2rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px]"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.tiktok.com/@_g4mm4_" target="_blank" aria-label="TikTok" class="w-[40px] h-[40px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.2rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px]"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          
+          <div class="contact-form card bg-[rgba(30,111,219,0.1)] rounded-xl p-10 border border-[rgba(78,160,255,0.1)] mt-4">
+            <form id="contactForm">
+              <div class="form-group mb-8">
+                <label for="name" class="block font-semibold mb-3">Full Name</label>
+                <input type="text" id="name" name="name" class="form-control w-full px-4 py-3 bg-[rgba(78,160,255,0.05)] border border-[rgba(78,160,255,0.2)] rounded-xl text-light font-main transition-all duration-300 focus:outline-none focus:border-accent focus:shadow-[0_0_0_2px_rgba(0,255,170,0.2)]" required>
+              </div>
+              
+              <div class="form-group mb-8">
+                <label for="email" class="block font-semibold mb-3">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control w-full px-4 py-3 bg-[rgba(78,160,255,0.05)] border border-[rgba(78,160,255,0.2)] rounded-xl text-light font-main transition-all duration-300 focus:outline-none focus:border-accent focus:shadow-[0_0_0_2px_rgba(0,255,170,0.2)]" required>
+              </div>
+              
+              <div class="form-group mb-8">
+                <label for="subject" class="block font-semibold mb-3">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-control w-full px-4 py-3 bg-[rgba(78,160,255,0.05)] border border-[rgba(78,160,255,0.2)] rounded-xl text-light font-main transition-all duration-300 focus:outline-none focus:border-accent focus:shadow-[0_0_0_2px_rgba(0,255,170,0.2)]" required>
+              </div>
+              
+              <div class="form-group mb-8">
+                <label for="message" class="block font-semibold mb-3">Message</label>
+                <textarea id="message" name="message" class="form-control w-full px-4 py-3 bg-[rgba(78,160,255,0.05)] border border-[rgba(78,160,255,0.2)] rounded-xl text-light font-main transition-all duration-300 focus:outline-none focus:border-accent focus:shadow-[0_0_0_2px_rgba(0,255,170,0.2)] min-h-[180px] resize-y" required></textarea>
+              </div>
+              
+              <button type="submit" class="form-submit w-full px-5 py-4 bg-gradient-to-br from-primary to-primary-dark text-white rounded-xl font-semibold cursor-pointer transition-all duration-300 hover:bg-gradient-to-br hover:from-primary-dark hover:to-primary hover:-translate-y-[3px] hover:shadow-primary">
+                <span id="submitText">Send Message</span>
+                <span id="submitSpinner" class="hidden"><i class="fas fa-spinner fa-spin"></i></span>
+              </button>
+              
+              <div id="formStatus" class="form-status mt-6 px-4 py-3 rounded-xl text-center font-semibold hidden"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-darker text-center">
+    <div class="container max-w-screen-xl mx-auto px-6">
+      <div class="footer-content max-w-[600px] mx-auto">
+        <a href="#home" class="footer-logo font-heading text-[2rem] font-bold text-primary-light mb-6 inline-block">Mahesa</a>
+        
+        <div class="footer-links flex justify-center gap-8 mb-8">
+          <a href="#home" class="text-light hover:text-accent transition-all duration-300">Home</a>
+          <a href="#about" class="text-light hover:text-accent transition-all duration-300">About</a>
+          <a href="#skills" class="text-light hover:text-accent transition-all duration-300">Skills</a>
+          <a href="#projects" class="text-light hover:text-accent transition-all duration-300">Projects</a>
+          <a href="#sertifikat" class="text-light hover:text-accent transition-all duration-300">Certificates</a>
+          <a href="#articles" class="text-light hover:text-accent transition-all duration-300">Articles</a>
+          <a href="#contact" class="text-light hover:text-accent transition-all duration-300">Contact</a>
+        </div>
+        
+        <div class="footer-social flex justify-center gap-6 mb-8">
+          <a href="https://github.com/MahesaTafriyan" target="_blank" aria-label="GitHub" class="w-[40px] h-[40px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.2rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px]"><i class="fab fa-github"></i></a>
+          <a href="https://instagram.com/hesaxyz_" target="_blank" aria-label="Instagram" class="w-[40px] h-[40px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.2rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px]"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/MahesaTafriyan" target="_blank" aria-label="Twitter" class="w-[40px] h-[40px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.2rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px]"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.tiktok.com/@_g4mm4_" target="_blank" aria-label="TikTok" class="w-[40px] h-[40px] flex items-center justify-center bg-[rgba(78,160,255,0.1)] rounded-full text-[1.2rem] transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-[5px]"><i class="fab fa-tiktok"></i></a>
+        </div>
+        
+        <p class="copyright text-[0.9rem] opacity-70">&copy; 2025 Mahesa Tafriyan. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#home" id="back-to-top" class="back-to-top fixed bottom-8 right-8 bg-primary text-white w-[50px] h-[50px] rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-accent hover:text-dark" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Netlify Identity -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Handle login redirect
+    if (window.location.href.includes('#invite_token')) {
+      window.location.href = '/admin/' + window.location.hash;
+    }
+  </script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
